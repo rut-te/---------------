@@ -18,14 +18,14 @@ export default function App() {
           <Route path="London" >
             <Route index element={<SpecificCity string={"London"} />} />
           </Route>
-          <Route path="New York" >
-            <Route index element={<SpecificCity string={"New York"} />} />
-          </Route>
-          <Route path="Alaska" >
-            <Route index element={<SpecificCity string={"Alaska"} />} />
+          <Route path="New_York" >
+            <Route index element={<SpecificCity string={"New_York"} />} />
           </Route>
           <Route path="Eylat" >
             <Route index element={<SpecificCity string={"Eylat"} />} />
+          </Route>
+          <Route path="Alaska" >
+            <Route index element={<SpecificCity string={"Alaska"} />} />
           </Route>
         </Route>
         <Route path="*" element={<DefaultPage string={"oops the page you want arn't found😚"} />} />
