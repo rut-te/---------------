@@ -1,16 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React from "react";
 import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
-  
+import Home from "./components/js/Home";
+import SpecificCity from "./components/js/SpecificCity";
+import DefaultPage from "./components/js/DefaultPage";
+import Layout from "./components/js/Layout";
 
+export default function App() {
   return (
     <>
-      
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<DefaultPage string={"welcom🥳"} />} />
+        <Route path="/home" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="London" >
+            <Route index element={<SpecificCity string={"London"} />} />
+          </Route>
+          <Route path="New York" >
+            <Route index element={<SpecificCity string={"New York"} />} />
+          </Route>
+          <Route path="Alaska" >
+            <Route index element={<SpecificCity string={"Alaska"} />} />
+          </Route>
+          <Route path="Eylat" >
+            <Route index element={<SpecificCity string={"Eylat"} />} />
+          </Route>
+        </Route>
+        <Route path="*" element={<DefaultPage string={"oops the page you want arn't found😚"} />} />
+      </Routes >
+      </BrowserRouter>
     </>
   )
 }
-
-export default App
