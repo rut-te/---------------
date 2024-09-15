@@ -1,4 +1,4 @@
-//import '../css/Messege.css'
+import '../css/Exeption.css';
 
 export default function Exeption() {
 

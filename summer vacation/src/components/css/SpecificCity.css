@@ -1,0 +1,21 @@
+img{
+    width: 30vw;
+    height: 40vh;
+    margin: 2vw;
+    margin-left: 7vw;
+    border-radius: 4px;
+    align-self: center;
+}
+
+.pictures{
+    background-color: rgba(151, 195, 216, 0.485);
+    padding: 1%;
+    margin: 4vw;
+    margin-bottom: 1vh;
+    margin-top: 2vh;
+    border-radius: 25px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr; /* יוצר 3 שורות בגובה שווה */
+    grid-template-columns: 1fr 1fr; /* יוצר 2 עמודות בגודל שווה */
+    align-items: center;
+}

@@ -1,0 +1,52 @@
+.information{
+    background-color: rgba(151, 195, 216, 0.485);
+    padding: 1%;
+    margin: 4vw;
+    margin-bottom: 1vh;
+    margin-top: 2vh;
+    border-radius: 25px;
+    /* margin: 2vw; */
+    position: relative;
+    max-width: 40vw;
+    min-width: 10vw;
+    align-self: center;
+    overflow: hidden;  
+}
+
+.name{
+    margin-right: 3vw;
+
+}
+
+.descreption{
+    margin-right: 3vw;
+    text-align: right;
+}
+
+.icon{
+    margin-left: 2vw;
+   
+}
+
+.firstLine{
+    display: flex;
+   justify-content: space-between;
+}
+
+.tempsDiv{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.likeAndDislikeButtons{
+    display: flex;
+    margin-top: 2vh;
+    align-items: center;
+    margin-left: 30%;
+}
+
+.button{
+    margin: 2vh;
+    background-color: rgba(134, 173, 193, 0.257);
+}

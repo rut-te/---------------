@@ -1,12 +1,12 @@
-//import '../css/Nav.css'
+import '../css/Header.css'
 
 export default function Header() {
 
     return (
         <>
-            <div>
-                <h2>תחזית</h2>
-            </div >
+            <nav>
+                <h1 className='title'>😍😍😍מתכננים את החופשה שלנו </h1>
+            </nav >
         </>
     )
 }

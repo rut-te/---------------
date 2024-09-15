@@ -1,0 +1,16 @@
+nav{
+    margin-bottom: 4vh;
+    padding: 0;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-around; */
+    background-color: rgba(156, 152, 156, 0.332);
+    width: 98vw;
+    max-width: 100vw;
+    height: 11vh;
+}
+
+.title{
+    font-size: 2.5em;
+    padding-top: 0.5vh;
+}
