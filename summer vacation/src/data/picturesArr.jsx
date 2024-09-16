@@ -16,12 +16,12 @@ import new_yorkPicture2 from'../../public/picturs/New York2.png';
 import new_yorkPicture3 from'../../public/picturs/New York3.png';
 import new_yorkPicture4 from'../../public/picturs/New York4.png';
 import new_yorkPicture5 from'../../public/picturs/New York5.png';
-import eylatFlag from'../../public/picturs/Eylat.png';
-import eylatPicture1 from'../../public/picturs/Eylat1.png';
-import eylatPicture2 from'../../public/picturs/Eylat2.png';
-import eylatPicture3 from'../../public/picturs/Eylat3.png';
-import eylatPicture4 from'../../public/picturs/Eylat4.png';
-import eylatPicture5 from'../../public/picturs/Eylat5.png';
+import eilatFlag from'../../public/picturs/Eylat.png';
+import eilatPicture1 from'../../public/picturs/Eylat1.png';
+import eilatPicture2 from'../../public/picturs/Eylat2.png';
+import eilatPicture3 from'../../public/picturs/Eylat3.png';
+import eilatPicture4 from'../../public/picturs/Eylat4.png';
+import eilatPicture5 from'../../public/picturs/Eylat5.png';
 
 export const londonPicturesArr=[londonFlag,londonPicture1,londonPicture2,londonPicture3,londonPicture4,londonPicture5];
 
@@ -29,4 +29,4 @@ export const alaskaPicturesArr=[alaskaFlag,alaskaPicture1,alaskaPicture2,alaskaP
 
 export const new_yorkPicturesArr=[new_yorkFlag,new_yorkPicture1,new_yorkPicture2,new_yorkPicture3,new_yorkPicture4,new_yorkPicture5];
 
-export const eylatPicturesArr=[eylatFlag,eylatPicture1,eylatPicture2,eylatPicture3,eylatPicture4,eylatPicture5];
+export const eilatPicturesArr=[eilatFlag,eilatPicture1,eilatPicture2,eilatPicture3,eilatPicture4,eilatPicture5];

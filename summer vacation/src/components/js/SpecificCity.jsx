@@ -1,6 +1,6 @@
 import '../css/SpecificCity.css'
 import { useNavigate } from 'react-router-dom'
-import { eylatPicturesArr, new_yorkPicturesArr, alaskaPicturesArr, londonPicturesArr } from '../../data/picturesArr'
+import { eilatPicturesArr, new_yorkPicturesArr, alaskaPicturesArr, londonPicturesArr } from '../../data/picturesArr'
 
 export default function SpecificCity({ string }) {
 
@@ -13,8 +13,8 @@ export default function SpecificCity({ string }) {
         case 'Alaska':
             pictursArr = alaskaPicturesArr;
             break;
-        case 'Eylat':
-            pictursArr = eylatPicturesArr;
+        case 'Eilat':
+            pictursArr = eilatPicturesArr;
             break;
         case 'New_York':
             pictursArr = new_yorkPicturesArr;
@@ -31,7 +31,7 @@ export default function SpecificCity({ string }) {
                 <button className='closePictures' onClick={() => navigate("..")}>❌</button>
             </div>
             <div className='pictures'>
-                {pictursArr.map((picture,i) => (<img src={picture} className='i' />))}
+                {pictursArr.map((picture,i) => (<img src={picture} className='i' key={i} />))}
             </div>
         </div>
     )

@@ -1,8 +1,9 @@
 import '../css/Home.css'
-import {cities} from '../../data/cities_array';
+import { cities } from '../../data/cities_array';
 import CityWeather from './CityWeather';
+import { useEffect, useState } from 'react';
 
-//לטפל בבקשה של הלוט ולאן
+//להוסיף זכרון chase
 
 export default function Home() {
 
@@ -13,6 +14,7 @@ export default function Home() {
           return <CityWeather city={city} key={i} />
         }
         )}
+
       </main>
     </>
   )
