@@ -19,9 +19,9 @@ export default function CityWeather({ city }) {
     }, []);
 
     useEffect(() => {
-        const likeAndDislikeArr = JSON.parse(localStorage.getItem(`${city.name}`));
+        const likeAndDislikeArr = JSON.parse(localStorage.getItem(`${city.name}_opinion`));
         if (!likeAndDislikeArr) {
-            localStorage.setItem(city.name, JSON.stringify({ likes: 0, dislikes: 0 }));
+            localStorage.setItem(`${city.name}_opinion`, JSON.stringify({ likes: 0, dislikes: 0 }));
             setLikeCount(0);
             setDislikeCount(0);
         }
@@ -102,12 +102,12 @@ export default function CityWeather({ city }) {
     }
 
     function addDislikeCount() {
-        localStorage.setItem(city.name, JSON.stringify({ likes: likeCount, dislikes: (dislikeCount + 1) }));
+        localStorage.setItem(`${city.name}_opinion`, JSON.stringify({ likes: likeCount, dislikes: (dislikeCount + 1) }));
         setDislikeCount((dislikeCount) => dislikeCount + 1);
     }
 
     function addLikeCount() {
-        localStorage.setItem(city.name, JSON.stringify({ likes: (likeCount + 1), dislikes: dislikeCount }));
+        localStorage.setItem(`${city.name}_opinion`, JSON.stringify({ likes: (likeCount + 1), dislikes: dislikeCount }));
         setLikeCount((likeCount) => likeCount + 1);
     }
 
