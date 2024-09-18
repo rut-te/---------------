@@ -10,7 +10,8 @@ export default function CityWeather({ city }) {
     const [exeption, setExeption] = useState(false);
     const [likeCount, setLikeCount] = useState();
     const [dislikeCount, setDislikeCount] = useState();
-    const API_KEY = '5097fe0683f208a2a81e9594176d7387';
+    const API_KEY = '8ee633956bad6ae1965b557a94ecfcba';
+    const timmer=3 * 60 * 60 * 1000;
 
     useEffect(() => {
         setIsLoading(true);
@@ -32,7 +33,7 @@ export default function CityWeather({ city }) {
     }, []);
 
     useEffect(() => {
-        const intervalId = setInterval(handleRender, 3 * 60 * 60 * 1000);
+        const intervalId = setInterval(handleRender, timmer);
         return () => {
             clearInterval(intervalId);
         }
@@ -54,7 +55,6 @@ export default function CityWeather({ city }) {
     function handleRender() {
         if (JSON.parse(localStorage.getItem(`${city.name}_details`)))
             localStorage.removeItem(`${city.name}_details`);
-        console.log('re');
         setIsLoading(true);
         getCityDetails();
     };
@@ -70,7 +70,6 @@ export default function CityWeather({ city }) {
                 city.humidity = city_details.humidity;
                 city.icon = city_details.icon;
                 setIsLoading(false);
-                console.log('ls');
             }
             else {
                 const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city.name}&APPID=${API_KEY}&units=metric&&lang=he`);
@@ -85,7 +84,6 @@ export default function CityWeather({ city }) {
                     city.icon = city.feels_like <= 20 ? '⛈️' : city.feels_like >= 30 ? '☀️' : '⛅';
                     localStorage.setItem(`${city.name}_details`, JSON.stringify(city));
                     setIsLoading(false);
-                    console.log('b');
                 }
                 else {
                     throw new Error(response.status)

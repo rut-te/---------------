@@ -1,7 +1,5 @@
 import Header from "./Header";
-//import '../css/Outlet.css'
-import { Outlet, useParams } from "react-router-dom";
-import DefaultPage from "./DefaultPage";
+import { Outlet } from "react-router-dom";
 
 export default function Layout() {
 
